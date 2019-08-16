@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginNavGraph"
+    app:startDestination="@id/credentialsFragment">
+
+    <fragment
+        android:id="@+id/credentialsFragment"
+        android:name="com.example.navigation_mvvm.ui.login.credentials.CredentialsFragment"
+        android:label="CredentialsFragment"
+        tools:layout="@layout/credentials_fragment">
+        <action
+            android:id="@+id/action_credentialsFragment_to_termsConditionsFragment"
+            app:destination="@id/termsConditionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/termsConditionsFragment"
+        android:name="com.example.navigation_mvvm.ui.login.terms.TermsConditionsFragment"
+        android:label="TermsConditionsFragment"
+        tools:layout="@layout/terms_conditions_fragment" />
+
+</navigation>
